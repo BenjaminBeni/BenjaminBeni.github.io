@@ -73,7 +73,7 @@ li{
   border-bottom:2px solid #271409;
 }
 
-@media screen and (max-height: 520px){
+@media only screen and (max-height: 520px){
   .col1{
     display: none;
   }
@@ -92,7 +92,7 @@ li{
     border-bottom: 2px solid black;
   }
 }
-@media screen and (max-height: 450px){
+@media only screen and (max-height: 450px){
   .col1, .col3{
     display: none;
   }
@@ -105,7 +105,7 @@ li{
   }
 }
 
-@media screen and (max-width: 480px){
+@media only screen and (max-width: 480px){
   .row1{
     width: 91.5%;
     height: 20%;
@@ -126,7 +126,7 @@ li{
   }
 }
 
-@media screen and (max-height: 300px){
+@media only screen and (max-height: 300px){
   .col2 h2{
     display: none;
   }
