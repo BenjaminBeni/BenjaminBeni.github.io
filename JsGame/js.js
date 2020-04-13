@@ -90,11 +90,10 @@ function getQuestion(){
 }
 
 function start(){
-    document.getElementsByTagName("ul")[0].style.display = "block";
+
     document.getElementById("start").style.display = "none";
     document.getElementById("reset").style.visibility = "hidden";
-    document.getElementById("score").innerText = "Score = 0";
-    document.getElementById("question").innerText = "";
+
     for(let i = 0; i < alist.length; i++){
         alist[i].innerText = "";
     }
@@ -119,27 +118,25 @@ function startGame(obj){
     }
     qst.innerText = question;
 
-    for ( var i = 0; i < alist.length; i++ ) (function(i){ 
+    for ( var i = 0; i < alist.length; i++ ) (function(i){
         alist[i].onclick = function(){
             if(alist[i].innerText == canswer){
                 score = score + 1;
-                document.getElementById("score").innerText = "Score = " + score;
             }
             if(nr < nrq){
                 var q = getQuestion();
                 startGame(q);
             }
             else{
-                alert("You scored " + score + " out of " + nrq);
+                document.getElementsByTagName("h1")[0].innerText = "Congratulations, you scored " + score + " out of " + nrq;
                 nr = 0;
                 score = 0;
                 document.getElementById("reset").style.visibility = "visible";
-                document.getElementsByTagName("ul")[0].style.display = "none";
-                document.getElementsByTagName("h1")[0].style.display = "none";
-                document.getElementById("question").style.display = "none";
-                /*for(let i = 0; i < alist.length; i++){
-                    alist[i].style.visibility = "hidden";
-                }*/
+                document.getElementById("question").innerText = "";
+                for(let i = 0; i < alist.length; i++){
+                    alist[i].innerText = "";
+                }
+                used = new Array(nrq).fill(0);
             }
         }
     })(i);

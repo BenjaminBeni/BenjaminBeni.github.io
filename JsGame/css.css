@@ -28,13 +28,12 @@ body{
     border-radius: 20px;
     background: linear-gradient(to right, rgb(208, 255, 80), rgb(78, 127, 175), rgb(208, 255, 80));
     padding-left: 15px;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 1.1em;
 }
 
-
-
 h1{
+    display: block;
     animation: color-change 1s infinite;
 }
 
@@ -49,6 +48,7 @@ ul{
     margin-left: 5%;
     width: 90%;
     height: 50%;
+    display: block;
     /*border: 2px solid black;*/
 }
 
@@ -93,8 +93,8 @@ li:hover{
 
 #reset{
     float: left;
-    margin-left: 20px;
-    width: 30%;
+    margin-left: 40%;
+    width: 20%;
     height: 100%;
     border: 2px solid black;
     border-radius: 15px;
@@ -105,14 +105,4 @@ li:hover{
 #reset:hover{
     background: rgb(88, 20, 20);
     cursor: pointer;
-}
-
-#score{
-    float: right;
-    width: 30%;
-    height: 100%;
-    border: 2px solid black;
-    border-radius: 15px;
-    text-align: center;
-    background: rgb(65, 30, 30);
 }
