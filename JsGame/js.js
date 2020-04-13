@@ -5,7 +5,8 @@ var questions = {
         "a2": "A bow",
         "a3": "A hammer",
         "a4": "A pistol",
-        "a": "A sword"
+        "a": "A sword",
+        "id" : 0
     },
     "q1":{
         "q": "What is another word for lexicon?",
@@ -13,7 +14,8 @@ var questions = {
         "a2": "Language",
         "a3": "Vocabulary",
         "a4": "Group of a languages words",
-        "a": "Dictionary"
+        "a": "Dictionary",
+        "id" : 1
     },
     "q2":{
         "q": "What is the world's longest river?",
@@ -21,7 +23,8 @@ var questions = {
         "a2": "Volga",
         "a3": "Nile",
         "a4": "Rio Grande",
-        "a": "Amazon"
+        "a": "Amazon",
+        "id" : 2
     },
     "q3":{
         "q": "What is the world's largest island?",
@@ -29,7 +32,8 @@ var questions = {
         "a2": "Great Britain",
         "a3": "Cuba",
         "a4": "Hawai'i",
-        "a": "Greenland"
+        "a": "Greenland",
+        "id" : 3
     },
     "q4":{
         "q": "What is the diameter of Earth?",
@@ -37,7 +41,8 @@ var questions = {
         "a2": "8000 kilometers",
         "a3": "8000 meters",
         "a4": "8000 kilograms",
-        "a": "8000 miles"
+        "a": "8000 miles",
+        "id" : 4
     },
     "q5":{
         "q": "What is the capital of Turkeye?",
@@ -45,7 +50,8 @@ var questions = {
         "a2": "Istanbul",
         "a3": "Tokyo",
         "a4": "Moscow",
-        "a": "Ankara"
+        "a": "Ankara",
+        "id" : 5
     },
     "q6":{
         "q": "What is the oldest programming language?",
@@ -53,7 +59,8 @@ var questions = {
         "a2": "C",
         "a3": "COBOL",
         "a4": "BASIC",
-        "a": "ASSEMBLY"
+        "a": "ASSEMBLY",
+        "id" : 6
     },
     "q7":{
         "q": "Which browser has the most users?",
@@ -61,25 +68,25 @@ var questions = {
         "a2": "Safari",
         "a3": "Firefox",
         "a4": "Internet Explorer",
-        "a": "Google Chrome"
+        "a": "Google Chrome",
+        "id" : 7
     }
 }
 
 var nrq = Object.keys(questions).length;
-var used = {}
+var used = new Array(nrq).fill(0);
+console.log(used);
 var nr = 0;
 var score = 0;
 var alist = document.getElementsByClassName("answer");
 
 function getQuestion(){
     var x = Math.floor(Math.random() * nrq);
-    var y = JSON.stringify(x);
-    while(used[y]){
+    while(used[x] != 0){
         x = Math.floor(Math.random() * nrq);
-        y = JSON.stringify(x);
     }
-    used[y] = x;
-    return questions["q" + y];
+    used[x] = 1;
+    return questions["q" + x];
 }
 
 function start(){
