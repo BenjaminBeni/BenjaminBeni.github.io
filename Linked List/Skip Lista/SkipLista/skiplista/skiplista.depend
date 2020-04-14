@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1585350674 source:c:\users\miklo\onedrive\desktop\skiplista\skiplista\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1585564209 source:d:\asd\skip lista\skiplista\skiplista\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
