@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1586441784 source:c:\users\miklo\onedrive\desktop\bst\bst\main.c
-	<stdio.h>
-	<stdlib.h>
-	<assert.h>
-
