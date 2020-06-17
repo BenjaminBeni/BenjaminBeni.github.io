@@ -91,7 +91,7 @@ function getQuestion() {
 
 function start() {
 
-    document.getElementsByTagName("h1")[0].innerText = "Good Luck!";
+    document.getElementById("glp").innerHTML = "Good Luck!";
     document.getElementById("start").style.display = "none";
     document.getElementById("reset").style.visibility = "hidden";
 
