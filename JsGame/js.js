@@ -91,14 +91,15 @@ function getQuestion() {
 
 function start() {
 
-    document.getElementById("glp").innerHTML = "Good Luck!";
     document.getElementById("start").style.display = "none";
     document.getElementById("reset").style.visibility = "hidden";
+    var x = document.getElementById("glp")
 
     for (let i = 0; i < alist.length; i++) {
+        alist[i].style.visibility = "visible";
         alist[i].innerText = "";
     }
-
+    x.innerText = "Good Luck Player!"
     var q = getQuestion();
     startGame(q);
 }
@@ -135,7 +136,7 @@ function startGame(obj) {
                 document.getElementById("reset").style.visibility = "visible";
                 document.getElementById("question").innerText = "";
                 for (let i = 0; i < alist.length; i++) {
-                    alist[i].innerText = "";
+                    alist[i].style.visibility = "hidden";
                 }
                 used = new Array(nrq).fill(0);
             }
