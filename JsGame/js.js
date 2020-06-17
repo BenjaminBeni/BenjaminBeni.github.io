@@ -93,13 +93,13 @@ function start() {
 
     document.getElementById("start").style.display = "none";
     document.getElementById("reset").style.visibility = "hidden";
-    var x = document.getElementById("glp")
+    var x = document.getElementById("glp");
 
     for (let i = 0; i < alist.length; i++) {
         alist[i].style.visibility = "visible";
         alist[i].innerText = "";
     }
-    x.innerText = "Good Luck Player!"
+    x.innerText = "Good Luck Player!";
     var q = getQuestion();
     startGame(q);
 }
