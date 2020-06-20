@@ -1,0 +1,317 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#8dbae4, #9e3737);
+}
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+#cont{
+    margin-left: 20%;
+    margin-top: 2%;
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 24px;
+    background: rgb(103, 104, 105);
+}
+#lform{
+    width: 60%;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(103, 104, 105);
+    display: none;
+    margin-left: 20%;
+    margin-top: 2%;
+    color:white;
+    text-shadow: 2px 1px 3px black;
+    box-shadow: 1px 1px 3px black;
+}
+#logout{
+    box-shadow: 1px 1px 3px black;
+    width: 60%;
+    margin-top: -10px;
+    margin-left: 20%;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    background: none;
+}
+#logoutbtn{
+    float: left;
+    margin-left: 30%;
+    width: 40%;
+    height: 100%;
+    border: 2px solid rgb(29, 27, 27);
+    border-radius: 10px;
+    background: linear-gradient(rgb(158, 38, 16), rgb(66, 66, 62));
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    box-shadow: 1px 1px 8px black;
+}
+#logoutbtn:hover{
+    cursor: pointer;
+    text-shadow: 4px 4px 4px black;
+}
+#yandm{
+    margin-left:20%;
+    margin-top: 2%;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    
+}
+#years{
+    float: left;
+    margin: 2px 2px 2px 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+}
+#months{
+    float: right;
+    margin: 2px 2px 2px 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+}
+select{
+    width: 100%;
+    height: 100%;
+    background: #d1f117;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    opacity: 0.8;
+}
+select:hover{
+    background: rgb(189, 69, 0);
+}
+option{
+    border: 1px solid gray;
+    background: rgb(223, 63, 0);
+    cursor: pointer;
+}
+#dnames{
+    margin-top: 4%;
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.day{
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 0 0 2px 0;
+    background: rgb(0, 42, 85);
+    color:white;
+    text-shadow: 1px 2px 3px black;
+    opacity: 0.8;
+    box-shadow: 1px 1px 3px black;
+}
+
+.day:hover{
+    border: 1px solid black;
+    background: #451215;
+    cursor: pointer;
+}
+
+#days{
+    margin-top: 2px;
+    margin-left: 20%;
+    width: 60%;
+    height: auto;
+    border-bottom: 2px solid black;
+        
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 2px;
+    grid-column-gap: 10px;
+}
+
+#today{
+    background: rgb(138, 9, 75);
+    border-radius: 10px;
+    border: 1px solid black;
+    color:white;
+}
+#today:hover{
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #451215;
+    color: white;
+    cursor: pointer;
+}
+
+.selectedDay{
+    color:white;
+    background: rgb(163, 3, 3);
+}
+
+label{
+    float:left;
+    margin-left: 5%;
+}
+
+input{
+    float:right;
+    background: none;
+    border: none;
+    width: 50%;
+}
+input:hover{
+    cursor: default;
+}
+
+#submit{
+    float:left;
+    width: 40%;
+    margin-left: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #973cec;
+    height: auto;
+    box-shadow: 1px 1px 3px black;
+}
+#submit:hover{
+    cursor: pointer;
+    background: rgb(13, 97, 182);
+}
+
+.disabled{
+    border: 1px solid gray;
+    color: gray;
+}
+
+#notloggedDiv{
+    margin-left: 30%;
+    width: 40%;
+    height: 30%;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: rgb(218, 42, 42);
+}
+
+option{
+    width: 70%;
+    height: 20px;
+}
+
+@media only screen and (max-width: 260px){
+    #dnames{
+        margin-top: 2%;
+        margin-left: 1%;
+        width: 98%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        text-align: center;
+    }
+    #days{
+        margin-top: 2px;
+        margin-left: 1%;
+        width: 98%;
+        height: auto;
+        border-bottom: 2px solid black;
+            
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-row-gap: 2px;
+        grid-column-gap: 10px;
+    }
+    form{
+        margin: 2% 0 0 1%;
+        width: 98%;
+        height: auto;
+        border: 2px solid black;
+        background: rgb(85, 88, 92);
+        display: inline-block;
+        border-radius: 10px;
+    }
+    #logoutbtn{
+        float: left;
+        margin-left: 1%;
+        width: 98%;
+    }
+    #yandm{
+        margin-left: 1%;
+        margin-top: 2%;
+        width: 98%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media only screen and (min-width: 261px) and (max-width: 360px){
+    #dnames{
+        margin-top: 2%;
+        margin-left: 10%;
+        width: 80%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 10px;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        text-align: center;
+    }
+    #days{
+        margin-top: 2px;
+        margin-left: 10%;
+        width: 80%;
+        height: auto;
+        border-bottom: 2px solid black;
+            
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-row-gap: 2px;
+        grid-column-gap: 10px;
+    }
+    form{
+        margin: 2% 0 0 10%;
+        width: 80%;
+        height: auto;
+        border: 2px solid black;
+        background: rgb(85, 88, 92);
+        display: inline-block;
+        border-radius: 10px;
+    }
+    #logoutbtn{
+        margin-left: 10%;
+        width: 80%;
+    }
+    #yandm{
+        margin-left:10%;
+        margin-top: 2%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    select{
+        font-size: 18px;
+    }
+}

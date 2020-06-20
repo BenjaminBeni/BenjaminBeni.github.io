@@ -1,0 +1,141 @@
+body{
+    width: 98vw;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(#8dbae4, #9e3737);
+}
+input:focus, button:focus {
+    outline: none;
+}
+a{
+    float:right;
+    color:rgb(218, 178, 0);
+    margin: 10px 10px 0 0;
+    text-shadow: 1px 1px 3px black;
+}
+a:hover{
+    color: rgb(177, 0, 0);
+    text-shadow: 1px 1px 3px black;
+}
+#submit:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 2px black;
+}
+@media screen and (max-width: 299px){
+    body{
+        font-size: 18px;
+    }
+    #loginform{
+        width: 95%;
+        border: 4px solid gray;
+        border-radius: 15px;
+        height: auto;
+        background: linear-gradient(to right, rgb(121, 45, 45), rgb(57, 102, 145));
+        display: block;
+    }
+    #username,#password{
+        float: left;
+        width: 100%;
+        height: 20px;
+        border-radius: 10px;
+        border: 2px solid rgb(83, 142, 201);
+    }
+    
+    #submit{
+        margin-top:10px;
+        width: 60%;
+        margin-left:20%;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 18px;
+        background: rgb(240, 137, 78);
+    }
+}
+@media screen and (min-width:300px) and (max-width:800px){
+    body{
+        font-size: 16px;
+    }
+    #loginform{
+        width: 95%;
+        border: 4px solid gray;
+        border-radius: 15px;
+        height: auto;
+        background: linear-gradient(to right, rgb(121, 45, 45), rgb(57, 102, 145));
+        display: inline-block;
+    }
+    label{
+        margin-left: 5%;
+        font-size: 14px;
+    }
+    #username,#password{
+        float: right;
+        width: 40%;
+        height: 20px;
+        border-radius: 10px;
+        border: 2px solid rgb(83, 142, 201);
+    }
+    
+    #submit{
+        margin-top:10px;
+        width: 60%;
+        margin-left:20%;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 18px;
+        background: rgb(240, 137, 78);
+    }
+}
+
+@media screen and (min-width: 801px){
+    #reg{
+        width: 60%;
+        margin-left: 20%;
+        border: none;
+        height: auto;
+        font-size: 26px;
+        display: grid;
+        grid-template-columns: 1;
+        justify-content: center;
+    }
+    #loginform{
+        width: 60%;
+        margin-left: 20%;
+        border: 4px solid gray;
+        border-radius: 15px;
+        height: auto;
+        font-size: 26px;
+        background: linear-gradient(to right, rgb(121, 45, 45), rgb(57, 102, 145));
+        display: inline-block;
+    }
+    
+    label{
+        margin-left: 5%;
+    }
+    
+    #username,#password{
+        float: right;
+        margin-right: 5%;
+        width: 60%;
+        height: 30px;
+        border-radius: 10px;
+        border: 2px solid rgb(83, 142, 201);
+    }
+    
+    #submit{
+        width: 20%;
+        margin: 10px 0 10px 40%;
+        height: 40px;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 24px;
+        background: rgb(240, 137, 78);
+    }
+}    
+
+.forlabels{
+    width: 100%;
+    height: auto;
+}

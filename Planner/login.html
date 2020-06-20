@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel = "stylesheet" type = "text/css" href = "CSS/login.css">
+</head>
+<body onload = "rdy()">
+    <form action = "loginuser.php" method = "POST" enctype="multipart/form-data" id = "loginform">
+        <u><strong><i><h5 align = "center">Login</i></strong></u></h5>
+        <div class = "forlabels">
+            <label for = "username"><u><strong><i>Username: </i></strong></u></label>
+            <input type = "text" name = "username" id = "username" required autocomplete = "off"><br>
+        </div>
+        <br>
+        <div class = "forlabels">
+            <label for = "password"><u><strong><i>Password: </i></strong></u></label>
+            <input type = "password" name = "password" id = "password" required autocomplete = "off"><br>
+        </div>
+        <br>
+        <input type="submit" value="Login" name="submit" id = "submit">
+    </form>
+    <div id = "reg">
+        <a href = "register.html">Register Now</a>
+    </div>
+    <script>
+        function rdy(){
+            var sp = document.getElementById("password");
+            sp.addEventListener("mouseover", function(){
+                sp.type = "text";
+            })
+            sp.addEventListener("mouseout", function(){
+                sp.type = "password";
+            })
+        }
+    </script>
+</body>
+</html>
