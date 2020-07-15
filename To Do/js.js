@@ -57,16 +57,14 @@ function newText(text) {
         ln--
     }
 
-    /// Beni - megnezted az "elso szex elott amit tudnod kell" videokat is, azert mert mar megvolt vagy mert erdekelt a tema?
-
     for (var i = 0; i < ln; i++) {
-        if (i != 0 && i % 100 > 85 && ok == 0){
-            if( text[i] == ' ' ){
+        if (i != 0 && i % 100 > 85 && ok == 0) {
+            if (text[i] == ' ') {
                 t = t + "<br>"
                 ok = 1
             }
         }
-        if (i == 100){
+        if (i == 100) {
             ok = 0;
         }
         t = t + text[i]
