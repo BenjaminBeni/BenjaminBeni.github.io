@@ -49,6 +49,7 @@ function setNewVar(x) {
     removeItem()
 }
 
+// Insert new line after 85 to 100 characters
 function newText(text) {
     var ok = 0
     var t = ""
@@ -56,7 +57,6 @@ function newText(text) {
     while (text[ln - 1] == ' ') {
         ln--
     }
-
     for (var i = 0; i < ln; i++) {
         if (i != 0 && i % 100 > 85 && ok == 0) {
             if (text[i] == ' ') {
