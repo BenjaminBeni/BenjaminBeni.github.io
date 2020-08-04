@@ -21,8 +21,8 @@
 }*/
 
 function ready() {
-   var photos = document.getElementById("photos")
-    for(var i = 1; i <= 116; i++){
+    var photos = document.getElementById("photos")
+    for(var i = 1; i <= 164; i++){
         var name = "pic" + JSON.stringify(i) + '.jpg'
         var image = document.createElement("img")
         image.src = "./photos/" + name
