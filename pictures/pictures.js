@@ -1,23 +1,32 @@
-function ready() {
-    var body = document.getElementsByTagName('body')[0]
+/*function ready() {
+    var row = document.getElementsByClassName('row')[0]
+    var counter = 1
+    var col = document.createElement("div")
+    col.className = "column"
     for(var i = 1; i <= 116; i++){
-        var name = "pic" + JSON.stringify(i)
-        var responsive = document.createElement("div")
-        responsive.className = "responsive"
-        var gallery = document.createElement("div")
-        gallery.className = "gallery"
+        var name = "pic" + JSON.stringify(i) + '.jpg'
+        if (counter == 7){
+            row.append(col)
+            col = document.createElement("div")
+            col.className = "column"
+            counter = 1
+        }
+
         var image = document.createElement("img")
-        image.src = "./photos/" + name + ".jpg"
-        image.width = "600"
-        image.height = "400"
-
-        gallery.append(image)
-        responsive.append(gallery)
-
-        body.append(responsive)
+        image.src = "./photos/" + name
+        image.style.width = "100%"
+        col.append(image)
+        counter += 1
     }
-    var clrfix = document.createElement("div")
-    clrfix.className = "clearfix"
-    body.append(clrfix)
-}
+}*/
 
+function ready() {
+   var photos = document.getElementById("photos")
+    for(var i = 1; i <= 116; i++){
+        var name = "pic" + JSON.stringify(i) + '.jpg'
+        var image = document.createElement("img")
+        image.src = "./photos/" + name
+        image.style.width = "100%"
+        photos.append(image)
+    }
+}
